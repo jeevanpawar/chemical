@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
 	
 	jQuery('#featured_desc').jcarousel({
 		scroll: 1,
-		auto: 5,
+		auto: 1,
 		wrap: 'both',
 		animation: 1500,
 		initCallback: feature_carousel_initCallback,
@@ -25,7 +25,7 @@ jQuery(document).ready(function(){
 	
 	jQuery('#featured_images').jcarousel({
 		scroll: 1,
-		auto: 5,
+		auto: 1,
 		wrap: 'both',
 		animation: 1500,
 		initCallback: feature_carousel_initCallback,
