@@ -388,9 +388,11 @@ color: #2A1C11;
 .map
 {
 	margin-top:5px;
-	margin-right:-50px;
+	margin-left:25px;
+	position:static;
 	
 }
+
 .map1_heading
 {
 	margin-right:30px;	

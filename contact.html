@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Besi Drugs</title>
@@ -9,9 +9,41 @@
 <script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
 <script type="text/javascript" src="js/jquery.easing.js"></script>
 <script type="text/javascript" src="js/jquery.scripts.js"></script>
-
-
-<body>
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var position = new google.maps.LatLng(20.274929, 73.828549);
+    var myOptions = {
+      zoom: 9,
+      center: position,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(
+        document.getElementById("map_canvas"),
+        myOptions);
+ 
+    var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        title:"This is the place."
+    });  
+ 
+    var contentString = '<strong>BESI DRUGS PVT. LTD.</strong> <BR>31-35 & 48-51/201<br>lakhmapur,Dindori,Nashik,<br>Maharashtra';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+ 
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+ 
+  }
+ 
+</script>
+</head>
+<body onload="initialize()">
 <div id="wrap">
     <div class="top_corner"></div>
     <div id="main_container">
@@ -83,15 +115,16 @@
                 <div class="addr1"></div>
                     
 			</div>
+            <div class="map">
+		 <div id="map_canvas" style="width:920px; height:700px;></div>
+		</div>
 		</div>
        
        
-        <div class="map">
-		
-		<figure><iframe width="870" height="660" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=lakhmapur+village%2Bdindori%2Bnashik&amp;aq=&amp;sll=20.360078,74.421387&amp;sspn=2.960903,3.532104&amp;ie=UTF8&amp;hq=lakhmapur&amp;hnear=Dindori,+Nashik,+Maharashtra&amp;t=m&amp;cid=17246797783482266065&amp;ll=20.25962,73.843231&amp;spn=0.463798,0.479279&amp;z=10&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=lakhmapur+village%2Bdindori%2Bnashik&amp;aq=&amp;sll=20.360078,74.421387&amp;sspn=2.960903,3.532104&amp;ie=UTF8&amp;hq=lakhmapur&amp;hnear=Dindori,+Nashik,+Maharashtra&amp;t=m&amp;cid=17246797783482266065&amp;ll=20.25962,73.843231&amp;spn=0.463798,0.479279&amp;z=10&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small><br /></figure></div>
+        
        
      
-        	<div class="footer">
+        <div class="footer">
          <div class="ftrr">
                     Copyright @ 2013.All Rights Reserved. BESI DRUGS PVT LTD.<br></div> 
            <div class="ftrr1">Powered By &nbsp;&nbsp; <a href="http://www.wavetechline.com" target="_new"> Wave TechLine India pvt ltd.</a></div>
